@@ -26,7 +26,7 @@ npm install
 ```
 
 Duplicar o arquivo ".env.example" e renomear para ".env"
-Alterar no arquivo .env o nome da base de dados para "db_urpics". Exemplo: DB_DATABASE=db_urpic
+Alterar no arquivo .env o nome da base de dados para "db_urpics". Exemplo: DB_DATABASE=db_urpics
 
 Gerar a chave
 ```
