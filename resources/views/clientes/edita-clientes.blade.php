@@ -7,7 +7,7 @@
         @if($errors->any())
             <span classe="alert alert-dange" style="color: #ff0000;">
                 @foreach ($errors->all() as $error)
-                    {{ errors }} <br>                    
+                    {{ errors }} <br>
                 @endforeach
 
             </span>
@@ -18,7 +18,7 @@
 
             @csrf
 
-            <input type="hidden"  name="id" value="{{ $clientes->id }}"> 
+            <input type="hidden"  name="id" value="{{ $clientes->id }}">
 
             <div class="container-fluid">
                 <div class="row gap-2">
@@ -27,7 +27,7 @@
                         <div  class="row">
                             <div class="col-md-2 col-sm-12 mb-2">
                                 <label for="cns" class="form-label">Número do cartão do SUS</label>
-                                <input type="text" class="form-control" id="cns" 
+                                <input type="text" class="form-control" id="cns"
                                         name="cns" maxlength="20" size=20 data-mask="000.0000.0000.0000" value="{{ old('cns', $clientes->cns) }}">
                                 @error('cns')
                                     <div class="text-danger">{{ $message }}</div>
@@ -40,7 +40,7 @@
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
-                            
+
                             <div class="col-md-6 col-sm-12 mb-2">
                                 <label for="nome" class="form-label">Nome Completo do Cliente</label>
                                 <input type="text" class="form-control" id="nome" name="nome" oninput="this.value = this.value.toUpperCase()" value="{{ old('nome', $clientes->nome) }}">
@@ -67,12 +67,12 @@
                                         @error('sexo')
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
-  
+
                                 </div>
-    
+
                                 <div class="col-md-2 col-sm-12 mb-2">
                                     <div class="form-group">
-                                        <label for="nacionalidade" class="form-label">Nacionalidade</label>                   
+                                        <label for="nacionalidade" class="form-label">Nacionalidade</label>
                                         <select name="nacionalidade" class="form-select {{$errors->has('nacionalidade')?'is-invalid':''}}" id="nacionalidade" >
                                             <option value="" selected> Selecione</option>
                                             <option {{$clientes->nacionalidade == "BRASILEIRA"      ? 'selected': ''}} value="BRASILEIRA">BRASILEIRA</option>
@@ -81,10 +81,10 @@
                                         @error('nacionalidade')
                                             <div class="text-danger">{{ $message }}</div>
                                         @enderror
-                                    </div>        
+                                    </div>
                                 </div>
                                 <div class="col-md-2 col-sm-12 mb-2">
-                                    <label for="cor" class="form-label">Cor</label>                  
+                                    <label for="cor" class="form-label">Cor</label>
                                     <select name="cor" class="form-select {{$errors->has('cor')?'is-invalid':''}}" id="cor" >
                                         <option value="" selected> Selecione</option>
                                         <option {{$clientes->cor == "BRANCA"     ? 'selected': ''}} value="BRANCA">     BRANCA</option>
@@ -92,7 +92,7 @@
                                         <option {{$clientes->cor == "AMARELA"    ? 'selected': ''}} value="AMARELA">    AMARELA</option>
                                         <option {{$clientes->cor == "PARDA"      ? 'selected': ''}} value="PARDA">      PARDA</option>
                                         <option {{$clientes->cor == "INDÍGENA"   ? 'selected': ''}} value="INDÍGENA">   INDÍGENA</option>
-                                    </select>    
+                                    </select>
                                     @error('cor')
                                         <div class="text-danger">{{ $message }}</div>
                                     @enderror
@@ -104,7 +104,7 @@
                                         <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
-                                
+
                             <div class="col-md-2 col-sm-12 mb-2">
                                 <div class="form-group">
                                     <label for="estado_civil" class="form-label">Estado Civil</label>
@@ -124,6 +124,13 @@
                         </div>
                         <hr>
                         <div class="row">
+                            <div class="col-md-2 col-sm-12">
+                                <label for="cep" class="form-label">Cep</label>
+                                <input type="text" class="form-control" id="cep" name="cep" maxlength="9" data-mask="00000-000"  size=9 value="{{ old('cep', $clientes->cep) }}">
+                                @error('cep')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
                             <div class="col-md-2 col-sm-2">
                                 <div class="form-group">
                                     <label for="logradouro" class="form-label">Logradouro</label>
@@ -162,13 +169,7 @@
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
-                            <div class="col-md-2 col-sm-12">
-                                <label for="cep" class="form-label">Cep</label>
-                                <input type="text" class="form-control" id="cep" name="cep" maxlength="9" data-mask="00000-000"  size=9 value="{{ old('cep', $clientes->cep) }}">
-                                @error('cep')
-                                    <div class="text-danger">{{ $message }}</div>
-                                @enderror
-                            </div>
+
                         </div>
                         <div class="row">
                             <div class="col-md-4 col-sm-12 m">
@@ -187,9 +188,9 @@
                             </div>
                             <div class="col-md-2 col-sm-12">
                                 <div class="form-group">
-                                    <label for="uf" class="form-label">Estado</label>                    
+                                    <label for="uf" class="form-label">Estado</label>
                                     <select name="uf" class="form-select {{$errors->has('uf')?'is-invalid':''}}" id="uf">
-                                        <option value="" selected> Selecione</option>                                      
+                                        <option value="" selected> Selecione</option>
                                         <option {{$clientes->uf == "AC" ? 'selected': ''}} value="AC">Acre</option>
                                         <option {{$clientes->uf == "AL" ? 'selected': ''}} value="AL">Alagoas</option>
                                         <option {{$clientes->uf == "AP" ? 'selected': ''}} value="AP">Amapá</option>
@@ -242,7 +243,7 @@
                                 @enderror
                             </div>
                             <div class="col-md-2 col-sm-12 mb-2">
-                                <label for="tipo_sangue" class="form-label">Tipo Sanguineo</label>                   
+                                <label for="tipo_sangue" class="form-label">Tipo Sanguineo</label>
                                 <select name="tipo_sangue" class="form-select {{$errors->has('tipo_sangue')?'is-invalid':''}}" id="tipo_sangue">
                                     <option value="" selected> Selecione</option>
                                     <option  {{$clientes->tipo_sangue == "NS" ? 'selected': ''}} value="NS">Não Sabe</option>
@@ -288,9 +289,99 @@
         </form>
 
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>   
-    
+    {{--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    ---}}
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+            function limpa_formulário_cep() {
+                // Limpa valores do formulário de cep.
+                $("#cep").val("");
+                $("#endereco").val("");
+                $("#bairro").val("");
+                $("#cidade").val("");
+                $("#uf").val("");
+                $("#cep").focus();
+                //$("#ibge").val("");
+            }
+
+            //Quando o campo cep perde o foco.
+            $("#cep").blur(function() {
+
+                //Nova variável "cep" somente com dígitos.
+                var cep = $(this).val().replace(/\D/g, '');
+
+                //Verifica se campo cep possui valor informado.
+                if (cep != "") {
+
+                    //Expressão regular para validar o CEP.
+                    var validacep = /^[0-9]{8}$/;
+
+                    //Valida o formato do CEP.
+                    if(validacep.test(cep)) {
+
+                        //Preenche os campos com "..." enquanto consulta webservice.
+                        $("#endereco").val("...");
+                        $("#bairro").val("...");
+                        $("#cidade").val("...");
+                        $("#uf").val("...");
+                        //$("#ibge").val("...");
+
+                        //Consulta o webservice viacep.com.br/
+                        $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
+
+                            if (!("erro" in dados)) {
+                                //Atualiza os campos com os valores da consulta.
+                                rua= dados.logradouro.toUpperCase();
+                                bairro = dados.bairro.toUpperCase();
+                                cidade = dados.localidade.toUpperCase();
+                                uf = dados.uf.toUpperCase();
+                                $("#logradouro").val("RUA");
+                                $("#endereco").val(rua);
+                                $("#bairro").val(bairro);
+                                $("#cidade").val(cidade);
+                                $("#uf").val(uf);
+                                $("#numero").focus();
+                                //$("#ibge").val(dados.ibge);
+                            } //end if.
+                            else {
+                                //CEP pesquisado não foi encontrado.
+                                limpa_formulário_cep();
+                                Swal.fire({
+                                        position: "top-center",
+                                        icon: "error",
+                                        title: "CEP não encontrado!",
+                                        showConfirmButton: false,
+                                        timer: 2500
+                                });
+                            }
+                        });
+                    } //end if.
+                    else {
+                        //cep é inválido.
+                        limpa_formulário_cep();
+                        Swal.fire({
+                            position: "top-center",
+                            icon: "error",
+                            title: "CEP não encontrado!",
+                            showConfirmButton: false,
+                            timer: 2500
+                        });
+                    }
+                } //end if.
+                else {
+                    //cep sem valor, limpa formulário.
+                    limpa_formulário_cep();
+                }
+            });
+        });
+    </script>
     <script>
            $(document).ready(function(){
               $('.date').mask('00/00/0000');
@@ -328,9 +419,9 @@
                 });
               $('.selectonfocus').mask("00/00/0000", {selectOnFocus: true});
             });
-        
+
     </script>
-    
+
 
 </x-layout-app>
 
