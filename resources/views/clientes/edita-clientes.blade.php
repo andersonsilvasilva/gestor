@@ -191,34 +191,34 @@
                                     <label for="uf" class="form-label">Estado</label>
                                     <select name="uf" class="form-select {{$errors->has('uf')?'is-invalid':''}}" id="uf">
                                         <option value="" selected> Selecione</option>
-                                        <option {{$clientes->uf == "AC" ? 'selected': ''}} value="AC">Acre</option>
-                                        <option {{$clientes->uf == "AL" ? 'selected': ''}} value="AL">Alagoas</option>
-                                        <option {{$clientes->uf == "AP" ? 'selected': ''}} value="AP">Amapá</option>
-                                        <option {{$clientes->uf == "AM" ? 'selected': ''}} value="AM">Amazonas</option>
-                                        <option {{$clientes->uf == "BA" ? 'selected': ''}} value="BA">Bahia</option>
-                                        <option {{$clientes->uf == "CE" ? 'selected': ''}} value="CE">Ceará</option>
-                                        <option {{$clientes->uf == "DF" ? 'selected': ''}} value="DF">Distrito Federal</option>
-                                        <option {{$clientes->uf == "ES" ? 'selected': ''}} value="ES">Espírito Santo</option>
-                                        <option {{$clientes->uf == "GO" ? 'selected': ''}} value="GO">Goiás</option>
-                                        <option {{$clientes->uf == "MA" ? 'selected': ''}} value="MA">Maranhão</option>
-                                        <option {{$clientes->uf == "MT" ? 'selected': ''}} value="MT">Mato Grosso</option>
-                                        <option {{$clientes->uf == "MS" ? 'selected': ''}} value="MS">Mato Grosso do Sul</option>
-                                        <option {{$clientes->uf == "MG" ? 'selected': ''}} value="MG">Minas Gerais</option>
-                                        <option {{$clientes->uf == "PA" ? 'selected': ''}} value="PA">Pará</option>
-                                        <option {{$clientes->uf == "PB" ? 'selected': ''}} value="PB">Paraíba</option>
-                                        <option {{$clientes->uf == "PR" ? 'selected': ''}} value="PR">Paraná</option>
-                                        <option {{$clientes->uf == "PE" ? 'selected': ''}} value="PE">Pernambuco</option>
-                                        <option {{$clientes->uf == "PI" ? 'selected': ''}} value="PI">Piauí</option>
-                                        <option {{$clientes->uf == "RJ" ? 'selected': ''}} value="RJ">Rio de Janeiro</option>
-                                        <option {{$clientes->uf == "RN" ? 'selected': ''}} value="RN">Rio Grande do Norte</option>
-                                        <option {{$clientes->uf == "RS" ? 'selected': ''}} value="RS">Rio Grande do Sul</option>
-                                        <option {{$clientes->uf == "RO" ? 'selected': ''}} value="RO">Rondônia</option>
-                                        <option {{$clientes->uf == "RR" ? 'selected': ''}} value="RR">Roraima</option>
-                                        <option {{$clientes->uf == "SC" ? 'selected': ''}} value="SC">Santa Catarina</option>
-                                        <option {{$clientes->uf == "SP" ? 'selected': ''}} value="SP">São Paulo</option>
-                                        <option {{$clientes->uf == "SE" ? 'selected': ''}} value="SE">Sergipe</option>
-                                        <option {{$clientes->uf == "TO" ? 'selected': ''}} value="TO">Tocantins</option>
-                                        <option {{$clientes->uf == "EX" ? 'selected': ''}} value="EX">Estrangeiro</option>
+                                        <option {{$clientes->uf == "AC" ? 'selected': ''}} value="AC">ACRE</option>
+                                        <option {{$clientes->uf == "AL" ? 'selected': ''}} value="AL">ALAGOAS</option>
+                                        <option {{$clientes->uf == "AP" ? 'selected': ''}} value="AP">AMAPÁ</option>
+                                        <option {{$clientes->uf == "AM" ? 'selected': ''}} value="AM">AMAZONAS</option>
+                                        <option {{$clientes->uf == "BA" ? 'selected': ''}} value="BA">BAHIA</option>
+                                        <option {{$clientes->uf == "CE" ? 'selected': ''}} value="CE">CEARÁ</option>
+                                        <option {{$clientes->uf == "DF" ? 'selected': ''}} value="DF">DISTRITO FEDERAL</option>
+                                        <option {{$clientes->uf == "ES" ? 'selected': ''}} value="ES">ESPÍRITO SANTO</option>
+                                        <option {{$clientes->uf == "GO" ? 'selected': ''}} value="GO">GOIÁS</option>
+                                        <option {{$clientes->uf == "MA" ? 'selected': ''}} value="MA">MARANHÃO</option>
+                                        <option {{$clientes->uf == "MT" ? 'selected': ''}} value="MT">MATO GROSSO</option>
+                                        <option {{$clientes->uf == "MS" ? 'selected': ''}} value="MS">MATO GROSSO DO SUL</option>
+                                        <option {{$clientes->uf == "MG" ? 'selected': ''}} value="MG">MINAS GERAIS</option>
+                                        <option {{$clientes->uf == "PA" ? 'selected': ''}} value="PA">PARÁ</option>
+                                        <option {{$clientes->uf == "PB" ? 'selected': ''}} value="PB">PARAÍBA</option>
+                                        <option {{$clientes->uf == "PR" ? 'selected': ''}} value="PR">PARANÁ</option>
+                                        <option {{$clientes->uf == "PE" ? 'selected': ''}} value="PE">PERNAMBUCO</option>
+                                        <option {{$clientes->uf == "PI" ? 'selected': ''}} value="PI">PIAUÍ</option>
+                                        <option {{$clientes->uf == "RJ" ? 'selected': ''}} value="RJ">RIO DE JANEIRO</option>
+                                        <option {{$clientes->uf == "RN" ? 'selected': ''}} value="RN">RIO GRANDE DO NORTE</option>
+                                        <option {{$clientes->uf == "RS" ? 'selected': ''}} value="RS">RIO  GRANDE DO SUL</option>
+                                        <option {{$clientes->uf == "RO" ? 'selected': ''}} value="RO">RONDÔNIA</option>
+                                        <option {{$clientes->uf == "RR" ? 'selected': ''}} value="RR">RORAIMA</option>
+                                        <option {{$clientes->uf == "SC" ? 'selected': ''}} value="SC">SANTA CATARINA</option>
+                                        <option {{$clientes->uf == "SP" ? 'selected': ''}} value="SP">SÃO PAULO</option>
+                                        <option {{$clientes->uf == "SE" ? 'selected': ''}} value="SE">SERGIPE</option>
+                                        <option {{$clientes->uf == "TO" ? 'selected': ''}} value="TO">TOCANTINS</option>
+                                        <option {{$clientes->uf == "EX" ? 'selected': ''}} value="EX">ESTRANGEIRO</option>
                                     </select>
                                     @error('uf')
                                         <div class="text-danger">{{ $message }}</div>
@@ -340,17 +340,17 @@
                                 //Atualiza os campos com os valores da consulta.
                                 rua= dados.logradouro.toUpperCase();
                                 bairro = dados.bairro.toUpperCase();
+                                logradouro= rua.substring(0, rua.indexOf(" ") + 0).toUpperCase();
+                                rua= rua.substring(rua.indexOf(" ") + 1, 60);
                                 cidade = dados.localidade.toUpperCase();
                                 uf = dados.uf.toUpperCase();
-                                $("#logradouro").val("RUA");
+                                $("#logradouro").val(logradouro);
                                 $("#endereco").val(rua);
                                 $("#bairro").val(bairro);
                                 $("#cidade").val(cidade);
                                 $("#uf").val(uf);
                                 $("#numero").focus();
-                                //$("#ibge").val(dados.ibge);
-                            } //end if.
-                            else {
+                            } else {
                                 //CEP pesquisado não foi encontrado.
                                 limpa_formulário_cep();
                                 Swal.fire({
